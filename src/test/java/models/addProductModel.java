@@ -1,5 +1,8 @@
+package models;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class addProductModel {
     private WebDriver driver;
@@ -8,7 +11,7 @@ public class addProductModel {
 
     private String itemColourXpathLocator = "(//ul[contains(@class, 'variant-option-list')])[2]/li/a[text()='%s']";
 
-    private By itemNameText = By.xpath("//h1[@class='product-single-name']");
+    private By itemNameText = By.xpath("//img[@alt='Nike react infinity run flyknit']");
 
     private By quanityTextBox = By.xpath("//input[@name='qty']");
 
@@ -18,17 +21,17 @@ public class addProductModel {
         this.driver = wd;
     }
 
-    public WebDriver clickItem()
-    {
+    public WebDriver clickItem() {
         /*
         //img[@alt='Nike react infinity run flyknit
          */
-        driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/main[1]/div[3]/div[1]/div[1]/div[2]/div[1]/a[1]/img[1]"));
+        driver.findElement(By.xpath("//img[@alt='Nike react infinity run flyknit']")).click();
         return driver;
     }
-    public String getItemName(){
-        return driver.findElement(itemNameText).getText();
-    }
+//    }
+//    public String getItemName(){
+//        return driver.findElement(itemNameText).getText();
+//    }
 
     public addProductModel fillQuantity(String quantity){
         driver.findElement(quanityTextBox).clear();
