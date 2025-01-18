@@ -5,7 +5,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/hp/Automation projects/TestNGComplete">
     <parameter name="driver" value="Chrome">
         <classes>
-            <class name="TestNGAnnoations"></class>
+            <class name="SkyScanner"></class>
         </classes>
     </parameter>
     </test></suite>

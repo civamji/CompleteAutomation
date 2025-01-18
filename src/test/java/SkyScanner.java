@@ -10,14 +10,15 @@ public class SkyScanner {
     @Test
     public void BookaTicket() throws InterruptedException {
         driver.get("https://www.skyscanner.co.in/");
-        driver.wait(5000);
+        Thread.sleep(5000);
+        //driver.wait(5000);
         driver.findElement(By.id("destinationInput-input")).sendKeys("Dubai");
-        driver.wait(5000);
+        //driver.wait(5000);
         driver.findElement(By.className("SearchControlButton_SearchControlBtn__YzUyO SearchControlButton_DesktopBtn__NzM1Z")).click();
         driver.findElement(By.xpath("//button[@aria-label='Saturday, 18 January 2025. Select as departure date']")).click();
-        driver.wait(5000);
+        //driver.wait(5000);
         driver.findElement(By.xpath("//button[@aria-label='Sunday, 19 January 2025. Select as departure date']")).click();
-        driver.wait(5000);
+        //driver.wait(5000);
         driver.findElement(By.xpath("//button[normalize-space()='Search']")).click();
     }
 }
